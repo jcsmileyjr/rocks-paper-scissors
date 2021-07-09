@@ -1,6 +1,6 @@
 
 .App {
-  background-color: #F9F9F9;
+  background-color: white;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -11,5 +11,6 @@
   main {
     margin: 0 auto;
     width: 40%;
+    height: 70%;
   }
 }

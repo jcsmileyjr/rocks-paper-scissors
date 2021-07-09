@@ -1,0 +1,26 @@
+
+.gameArea__container--style {
+    display: flex;
+    flex-direction: column;
+}
+
+.gameArea__container--style > h2 {
+    text-align: center;
+}
+
+.gameArea__image-gallery--style {
+    display: flex;
+    flex-direction: row;
+}
+
+.gameArea__image-gallery--style > section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameArea__image-style {
+    max-width: 70%;
+    max-height: 50%;
+}

@@ -7,6 +7,9 @@
 
 .title__container--style {
     background-color: white;
+    border-bottom-color: #335C67;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
 }
 
 /*Mobile screens*/
