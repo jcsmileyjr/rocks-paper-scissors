@@ -1,0 +1,31 @@
+
+.score__containter--style {
+    text-align: center;
+}
+
+.score__containter--style > h2 {
+    color: #9E2A2B;
+    margin:auto;
+}
+
+/*Tablet screens*/
+@media only screen and (min-width: 480px) {
+    .score__containter--style > h2{
+        font-size: xx-large;
+    }
+
+    .score__containter--style > p {
+        font-size: x-large;
+    }
+}
+
+/*Desktop screens*/
+@media only screen and (min-width: 1025px) {
+    .score__containter--style > h2{
+        font-size: xxx-large;
+    }
+
+    .score__containter--style > p {
+        font-size: xx-large;
+    }
+}

@@ -2,7 +2,7 @@ import './title.css';
 const Title = () => {
     return(
         <section className="title__container--style">
-            <p> Paper, Rock, Scissors Game </p>
+            <p className="title__content--style"> Paper, Rock, Scissors Game </p>
         </section>
     );
 }
