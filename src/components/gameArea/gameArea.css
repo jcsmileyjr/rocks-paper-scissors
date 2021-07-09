@@ -6,11 +6,19 @@
 
 .gameArea__container--style > h2 {
     text-align: center;
+    color: #9E2A2B;
+}
+
+.gameArea__label--style {
+    color: #335C67;
+    font-weight: bolder;
+    font-size: medium;
 }
 
 .gameArea__image-gallery--style {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .gameArea__image-gallery--style > section {
@@ -39,14 +47,30 @@
 
 /*Tablet screens*/
 @media only screen and (min-width: 480px) {
+    .gameArea__container--style > h2 {
+        font-size: xx-large;
+    }
+
     .gameArea__button--style {
+        font-size: x-large;
+    }
+
+    .gameArea__label--style {
         font-size: x-large;
     }
 }
 
 /*Desktop screens*/
 @media only screen and (min-width: 1025px) {
+    .gameArea__container--style > h2 {
+        font-size: xxx-large;
+    }
+
     .gameArea__button--style {
+        font-size: xx-large;
+    }
+
+    .gameArea__label--style {
         font-size: xx-large;
     }
 }
