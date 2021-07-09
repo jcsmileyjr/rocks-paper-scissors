@@ -9,20 +9,26 @@ const GameArea = () => {
             <h2>Choose One:</h2>
             <div className="gameArea__image-gallery--style">
                 <section>
-                    <img className="gameArea__image-style" id="rock" src={Rock} alt="A rock with a human looking face" />
+                    <button className="gameArea__ImageButton--style" onClick={() => alert("Hello World")}>
+                        <img className="gameArea__image-style" id="rock" src={Rock} alt="A rock with a human looking face" />
+                    </button>
                     <label className="gameArea__label--style" for="rock">Rock</label>
                 </section>
                 <section>
-                    <img className="gameArea__image-style" id="paper" src={Paper} alt="A peice of paper" />
+                    <button className="gameArea__ImageButton--style" onClick={() => alert("Hello World")}>
+                        <img className="gameArea__image-style" id="paper" src={Paper} alt="A peice of paper" />
+                    </button>
                     <label className="gameArea__label--style" for="paper">Paper</label>
                 </section>
                 <section>
-                    <img className="gameArea__image-style" id="scissors" src={Scissors} alt="A single scissors with black handels" />
+                    <button className="gameArea__ImageButton--style" onClick={() => alert("Hello World")}>
+                        <img className="gameArea__image-style" id="scissors" src={Scissors} alt="A single scissors with black handels" />
+                    </button>
                     <label className="gameArea__label--style" for="scissors">Scissors</label>
                 </section>
             </div>
             <div className="gameAreaButton__containter--style">
-                <button className="gameArea__button--style">Play</button>
+                <button className="gameArea__playButton--style" onClick={() => alert("Hello World")}>Play</button>
             </div>
         </article>
     );

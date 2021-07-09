@@ -15,7 +15,7 @@
 /*Mobile screens*/
 @media only screen and (max-width: 480px) {
     .title__content--style {
-        font-size: large;
+        font-size: x-large;
     }
 }
 
