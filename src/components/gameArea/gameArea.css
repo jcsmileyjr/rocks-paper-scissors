@@ -24,3 +24,36 @@
     max-width: 70%;
     max-height: 50%;
 }
+
+.gameAreaButton__containter--style {
+    text-align: center;
+    margin-top: 15vh;
+}
+
+.gameArea__button--style {
+    width: 20vw;
+    padding: 8px 0;
+    background-color: #335C67;
+    color: white;
+}
+
+/*Tablet screens*/
+@media only screen and (min-width: 480px) {
+    .gameArea__button--style {
+        font-size: x-large;
+    }
+}
+
+/*Desktop screens*/
+@media only screen and (min-width: 1025px) {
+    .gameArea__button--style {
+        font-size: xx-large;
+    }
+}
+
+/*Desktop screens*/
+@media only screen and (min-width: 1600px) {
+    .gameArea__button--style {
+        width: 10vw;
+    }
+}

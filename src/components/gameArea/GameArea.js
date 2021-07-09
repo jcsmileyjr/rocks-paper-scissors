@@ -21,7 +21,9 @@ const GameArea = () => {
                     <label for="scissors">Scissors</label>
                 </section>
             </div>
-            <button>Submit</button>
+            <div className="gameAreaButton__containter--style">
+                <button className="gameArea__button--style">Play</button>
+            </div>
         </article>
     );
 }
