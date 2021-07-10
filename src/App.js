@@ -9,6 +9,7 @@ function App() {
   const [playerChoice, setPlayerChoice] = useState("");
   const [showGameSummery, setGameSummery] = useState(false);
   const [gameResults, setGameResults] = useState("");
+  const [score, setScore] = useState(0);
 
   const getPlayerchoice = (choice) => {
     setPlayerChoice(choice);
@@ -37,12 +38,15 @@ function App() {
     }else if(playerChoice === "Rock" && computerChoice === "Scissors"){
       results.playerSummary = "Win";
       results.computerSummary = "Lose";
+      setScore(score + 10);
     }else if(playerChoice === "Scissors" && computerChoice === "Paper"){
       results.playerSummary = "Win";
       results.computerSummary = "Lose";
+      setScore(score + 10);
     }else if(playerChoice === "Paper" && computerChoice === "Rock"){
       results.playerSummary = "Win";
       results.computerSummary = "Lose";
+      setScore(score + 10);
     }else{
       results.playerSummary = "Lose";
       results.computerSummary = "Win";
@@ -56,7 +60,7 @@ function App() {
     <div className="App">
       <Title />
       <main>
-        <Score score={100} />
+        <Score score={score} />
         {!showGameSummery  &&
           <GameArea getPlayerchoice={getPlayerchoice} play={determineWinner} />
         }
