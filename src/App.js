@@ -56,6 +56,17 @@ function App() {
     setGameSummery(true); 
   }
 
+  const newGame = () => {
+    setGameSummery(false);
+    setPlayerChoice("");
+    setGameResults("");
+  }
+
+  const startOver = () => {
+    setScore(0);
+    newGame();
+  }
+
   return (
     <div className="App">
       <Title />
@@ -65,7 +76,7 @@ function App() {
           <GameArea getPlayerchoice={getPlayerchoice} play={determineWinner} />
         }
         {showGameSummery &&
-          <GameSummary results={gameResults} />
+          <GameSummary results={gameResults} newGame={newGame} startOver={startOver} />
         }
       </main>
     </div>
