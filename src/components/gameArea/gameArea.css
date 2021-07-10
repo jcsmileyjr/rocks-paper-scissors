@@ -60,6 +60,12 @@
 
 .gameArea__ImageButton--style:focus + .gameArea__label--style {
     color: #9E2A2B;
+    font-size:x-large;
+    margin-top: 10px;
+}
+
+.gameArea__ImageButton--style:focus {
+    width: 125%;
 }
 
 .gameArea__image-style:hover {
@@ -84,6 +90,11 @@
     .gameArea__label--style {
         font-size: x-large;
     }
+
+    .gameArea__ImageButton--style:focus + .gameArea__label--style {
+        font-size:xx-large;
+        margin-top: 20px;
+    }  
 }
 
 /*Desktop screens*/
@@ -101,9 +112,13 @@
     }
 
     .gameAreaButton__containter--style {
-        margin-top: 10vh;
-    }
-    
+        margin-top: 3vh;
+    }    
+
+    .gameArea__ImageButton--style:focus + .gameArea__label--style {
+        font-size:xxx-large;
+        margin-top: 20px;
+    }    
 }
 
 /*Desktop screens*/
