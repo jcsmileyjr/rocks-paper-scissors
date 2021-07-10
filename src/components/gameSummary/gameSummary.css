@@ -2,6 +2,7 @@
 
 .gameSummary__results--container {
     display:flex;
+    justify-content: space-evenly;
 }
 
 .gameSummary__summary--layout {
@@ -24,4 +25,53 @@
 .gameSummary__summary--style {
     color: #707070;
     font-size:small;
+}
+
+.gameSummary__buttonContainer--layout {
+    display: flex;
+
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.gameSummary__newGameButton--style, .gameSummary__startOverButton--style {
+    margin-top: 15vh;
+    width: 30vw;
+    padding: 8px 0;
+    font-weight: bolder;
+}
+
+.gameSummary__newGameButton--style {
+    color: #335C67;
+    border: 1px solid #335C67;
+    background-color: white;
+}
+
+.gameSummary__startOverButton--style {
+    background-color: #9E2A2B;
+    color: white;
+    border: none;
+}
+
+/*Tablet screens*/
+@media only screen and (min-width: 480px) {
+    .gameSummary__newGameButton--style, .gameSummary__startOverButton--style {
+        font-size: x-large;
+        width: 30vw;
+    }
+}
+
+/*Desktop screens*/
+@media only screen and (min-width: 1025px) {
+    .gameSummary__newGameButton--style, .gameSummary__startOverButton--style{
+        font-size: xx-large;
+        width: 20vw;
+    }    
+}
+
+/*Desktop screens*/
+@media only screen and (min-width: 1800px) {
+    .gameSummary__newGameButton--style, .gameSummary__startOverButton--style {
+        width: 10vw;
+    }
 }

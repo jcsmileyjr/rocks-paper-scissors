@@ -54,7 +54,10 @@ const GameSummary = ({results}) => {
                     <label className="gameSummary__summary--style" htmlFor="computerSummary">{results.computerSummary}</label>
                 </section>
             </div>
-            <section></section>
+            <section className="gameSummary__buttonContainer--layout">
+                <button className="gameSummary__newGameButton--style"> New Game</button>
+                <button className="gameSummary__startOverButton--style"> Start Over </button>
+            </section>
         </article>
     );
 }
