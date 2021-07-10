@@ -3,48 +3,53 @@ import React, {useState} from 'react';
 import Title from '../src/components/title/Title';
 import Score from './components/score/Score';
 import GameArea from './components/gameArea/GameArea';
+import GameSummary from './components/gameSummary/GameSummary';
 
 function App() {
   const [playerChoice, setPlayerChoice] = useState("");
-  const [computerChoice, setComputerChoice] = useState("");
   const [showGameSummery, setGameSummery] = useState(false);
   const [gameResults, setGameResults] = useState("");
 
   const getPlayerchoice = (choice) => {
-    //console.log(choice);
     setPlayerChoice(choice);
   }
 
   const getComputerChoice = () => {
     const choice = Math.floor(Math.random() * 3);
     if(choice === 0){
-      setComputerChoice("rock");
+      return "Rock";
     }else if(choice === 1){
-      setComputerChoice("paper")
+      return "Paper";
     }else{
-      setComputerChoice("scissors");
+      return "Scissors"
     }
   }
 
   const determineWinner = () => {
-    getComputerChoice();
-    if(playerChoice === "rock" && computerChoice === "rock"){
-      setGameResults("Tie")
-    }else if(playerChoice === "scissors" && computerChoice === "scissors"){
-      setGameResults("Tie")
-    }else if(playerChoice === "paper" && computerChoice === "paper"){
-      setGameResults("Tie")
-    }else if(playerChoice === "rock" && computerChoice === "scissors"){
-      setGameResults("Win")
-    }else if(playerChoice === "rock" && computerChoice === "paper"){
-      setGameResults("Lose")
-    }else if(playerChoice === "paper" && computerChoice === "scissors"){
-      setGameResults("Lose")
-    }else if(playerChoice === "rock" && computerChoice === "paper"){
-      setGameResults("Win")
+    const computerChoice = getComputerChoice();
+    let results = {};
+    results.player = playerChoice;
+    results.computer = computerChoice;
+
+    if(playerChoice === computerChoice){
+      results.playerSummary = "Tie";
+      results.computerSummary = "Tie";
+    }else if(playerChoice === "Rock" && computerChoice === "Scissors"){
+      results.playerSummary = "Win";
+      results.computerSummary = "Lose";
+    }else if(playerChoice === "Scissors" && computerChoice === "Paper"){
+      results.playerSummary = "Win";
+      results.computerSummary = "Lose";
+    }else if(playerChoice === "Paper" && computerChoice === "Rock"){
+      results.playerSummary = "Win";
+      results.computerSummary = "Lose";
+    }else{
+      results.playerSummary = "Lose";
+      results.computerSummary = "Win";
     }
-    //console.log(`Player: ${playerChoice} vs Computer ${computerChoice}`);
-    
+ 
+    setGameResults(results);
+    setGameSummery(true); 
   }
 
   return (
@@ -52,7 +57,12 @@ function App() {
       <Title />
       <main>
         <Score score={100} />
-        <GameArea getPlayerchoice={getPlayerchoice} play={determineWinner} />
+        {!showGameSummery  &&
+          <GameArea getPlayerchoice={getPlayerchoice} play={determineWinner} />
+        }
+        {showGameSummery &&
+          <GameSummary results={gameResults} />
+        }
       </main>
     </div>
   );

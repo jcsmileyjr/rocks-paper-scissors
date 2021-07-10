@@ -1,0 +1,27 @@
+
+
+.gameSummary__results--container {
+    display:flex;
+}
+
+.gameSummary__summary--layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.gameSummary__summary--layout > label {
+    margin-bottom: 10px;
+}
+
+.gameSummary__header--style {
+    color: #9E2A2B;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
+.gameSummary__summary--style {
+    color: #707070;
+    font-size:small;
+}

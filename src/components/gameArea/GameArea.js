@@ -9,19 +9,19 @@ const GameArea = ({getPlayerchoice, play}) => {
             <h2>Choose One:</h2>
             <div className="gameArea__image-gallery--style">
                 <section>
-                    <button className="gameArea__ImageButton--style" onClick={() => getPlayerchoice("rock")}>
+                    <button className="gameArea__ImageButton--style" onClick={() => getPlayerchoice("Rock")}>
                         <img className="gameArea__image-style" id="rock" src={Rock} alt="A rock with a human looking face" />
                     </button>
                     <label className="gameArea__label--style" htmlFor="rock">Rock</label>
                 </section>
                 <section>
-                    <button className="gameArea__ImageButton--style" onClick={() => getPlayerchoice("paper")}>
+                    <button className="gameArea__ImageButton--style" onClick={() => getPlayerchoice("Paper")}>
                         <img className="gameArea__image-style" id="paper" src={Paper} alt="A peice of paper" />
                     </button>
                     <label className="gameArea__label--style" htmlFor="paper">Paper</label>
                 </section>
                 <section>
-                    <button className="gameArea__ImageButton--style" onClick={() => getPlayerchoice("scissors")}>
+                    <button className="gameArea__ImageButton--style" onClick={() => getPlayerchoice("Scissors")}>
                         <img className="gameArea__image-style" id="scissors" src={Scissors} alt="A single scissors with black handels" />
                     </button>
                     <label className="gameArea__label--style" htmlFor="scissors">Scissors</label>
