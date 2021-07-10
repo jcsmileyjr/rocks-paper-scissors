@@ -43,14 +43,14 @@ const GameSummary = ({results, newGame, startOver}) => {
             <div className="gameSummary__results--container">
                 <section className="gameSummary__summary--layout">
                     <label className="gameSummary__header--style" htmlFor="playerChoice">Player</label>                
-                    <img id="playerChoice" className="gameArea__image-style" id="rock" src={getImage(results.player)} alt="Based on the results of the game could be a rock, paper, or scissors" />
-                    <img id="playerSummary" className="gameArea__image-style" id="rock" src={getResults(results.playerSummary)} alt="Based on the results of the game could be a happy, mad, or bleh smiley face" />                                    
+                    <img id="playerChoice" className="gameArea__image-style" src={getImage(results.player)} alt="Based on the results of the game could be a rock, paper, or scissors" />
+                    <img id="playerSummary" className="gameArea__image-style" src={getResults(results.playerSummary)} alt="Based on the results of the game could be a happy, mad, or bleh smiley face" />                                    
                     <label className="gameSummary__summary--style" htmlFor="playerSummary">{results.playerSummary}</label>
                 </section>  
                 <section className="gameSummary__summary--layout">
                     <label className="gameSummary__header--style" htmlFor="computerChoice">Computer</label>
-                    <img id="computerChoice" className="gameArea__image-style" id="paper" src={getImage(results.computer)} alt="Based on the results of the game could be a rock, paper, or scissors" />
-                    <img id="computerSummary" className="gameArea__image-style" id="rock" src={getResults(results.computerSummary)} alt="Based on the results of the game could be a happy, mad, or bleh smiley face" />                     
+                    <img id="computerChoice" className="gameArea__image-style" src={getImage(results.computer)} alt="Based on the results of the game could be a rock, paper, or scissors" />
+                    <img id="computerSummary" className="gameArea__image-style" src={getResults(results.computerSummary)} alt="Based on the results of the game could be a happy, mad, or bleh smiley face" />                     
                     <label className="gameSummary__summary--style" htmlFor="computerSummary">{results.computerSummary}</label>
                 </section>
             </div>
