@@ -78,6 +78,11 @@
     .gameArea__label--style {
         font-size: xx-large;
     }
+
+    .gameAreaButton__containter--style {
+        margin-top: 10vh;
+    }
+    
 }
 
 /*Desktop screens*/

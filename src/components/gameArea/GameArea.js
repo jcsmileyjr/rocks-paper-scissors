@@ -12,19 +12,19 @@ const GameArea = () => {
                     <button className="gameArea__ImageButton--style" onClick={() => alert("Hello World")}>
                         <img className="gameArea__image-style" id="rock" src={Rock} alt="A rock with a human looking face" />
                     </button>
-                    <label className="gameArea__label--style" for="rock">Rock</label>
+                    <label className="gameArea__label--style" htmlFor="rock">Rock</label>
                 </section>
                 <section>
                     <button className="gameArea__ImageButton--style" onClick={() => alert("Hello World")}>
                         <img className="gameArea__image-style" id="paper" src={Paper} alt="A peice of paper" />
                     </button>
-                    <label className="gameArea__label--style" for="paper">Paper</label>
+                    <label className="gameArea__label--style" htmlFor="paper">Paper</label>
                 </section>
                 <section>
                     <button className="gameArea__ImageButton--style" onClick={() => alert("Hello World")}>
                         <img className="gameArea__image-style" id="scissors" src={Scissors} alt="A single scissors with black handels" />
                     </button>
-                    <label className="gameArea__label--style" for="scissors">Scissors</label>
+                    <label className="gameArea__label--style" htmlFor="scissors">Scissors</label>
                 </section>
             </div>
             <div className="gameAreaButton__containter--style">
