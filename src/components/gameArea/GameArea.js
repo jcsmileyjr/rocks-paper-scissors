@@ -5,7 +5,7 @@ import Paper from '../../assets/paper.png';
 import Scissors from '../../assets/scissors.png'
 
 const GameArea = ({getPlayerchoice, play}) => {
-    const [select, setSelected] = useState("");
+    const [select, setSelected] = useState(0);
 
     const selected = (id) => {
         setSelected(id);
@@ -34,9 +34,11 @@ const GameArea = ({getPlayerchoice, play}) => {
                     <label className="gameArea__label--style" htmlFor="scissors">Scissors</label>
                 </section>
             </div>
-            <div className="gameAreaButton__containter--style">
-                <button className="gameArea__playButton--style" onClick={() => play()}>Play</button>
-            </div>
+            {select !== 0 &&
+                <div className="gameAreaButton__containter--style">
+                    <button className="gameArea__playButton--style" onClick={() => play()}>Play</button>
+                </div>
+            }
         </article>
     );
 }
