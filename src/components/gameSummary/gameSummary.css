@@ -47,10 +47,22 @@
     background-color: white;
 }
 
+.gameSummary__newGameButton--style:hover {
+    background-color: #335C67;
+    color:white;
+    border:none;
+}
+
 .gameSummary__startOverButton--style {
     background-color: #9E2A2B;
     color: white;
     border: none;
+}
+
+.gameSummary__startOverButton--style:hover {
+    color: #9E2A2B;
+    background-color: white;
+    border: 1px solid #9E2A2B;
 }
 
 /*Tablet screens*/
