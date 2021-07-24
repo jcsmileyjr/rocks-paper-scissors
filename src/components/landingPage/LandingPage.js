@@ -5,7 +5,7 @@ const LandingPage =({newGame}) => {
     return(
         <article className="landingPage__container--layout">
             <section className="landingPage__imageContainer--layout">
-                <img className="landingPage__image--style" src={Gloves} alt="Red and blue boxing gloves with funny faces" />
+                <img className="landingPage__image--style spinning-gloves" src={Gloves} alt="Red and blue boxing gloves with funny faces" />
             </section>
             <section className="landingPage__contentContainer--stye">
                 <div className="landingPage--centering">

@@ -11,7 +11,8 @@
 }
 
 .landingPage__image--style {
-    width: 100%;
+    margin: auto;
+    width: 50%;
 }
 
 .landingPage__newGameButton--style {
@@ -92,3 +93,20 @@
         width: 7vw;
     }
 }
+
+.spinning-gloves {  
+    animation-name: rotate-image;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    position: relative;
+}
+
+@keyframes rotate-image {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
