@@ -84,5 +84,11 @@
 
 /*Desktop screens*/
 @media only screen and (min-width: 1800px) {
+    .landingPage__rules--style {
+        margin: 0 12vw;
+    }
 
+    .landingPage__newGameButton--style {
+        width: 7vw;
+    }
 }
