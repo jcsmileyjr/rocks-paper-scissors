@@ -1,0 +1,88 @@
+
+.landingPage__container--layout {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px;
+}
+
+.landingPage__imageContainer--layout {
+    display: flex;
+    margin-top: 3px;
+}
+
+.landingPage__image--style {
+    width: 100%;
+}
+
+.landingPage__newGameButton--style {
+    margin-top: h;
+    width: 30vw;
+    padding: 8px 0;
+    font-weight: bolder;
+    background-color: #9E2A2B;
+    color: white;
+    border: none;
+}
+
+.landingPage--centering {
+    text-align: center;
+}
+
+.landingPage__header--style {
+    text-decoration: underline;
+    color: #9E2A2B;
+    margin-bottom: 0;
+}
+
+.landingPage__contentContainer--stye > p {
+    color: #335C67;
+}
+
+/*Tablet screens*/
+@media only screen and (min-width: 600px) {
+    .landingPage__container--layout {
+        margin-top: 5px;
+    }
+
+    .landingPage__imageContainer--layout {
+        max-height: 50vh;
+    }
+    .landingPage__image--style {
+        object-fit: contain;
+    }
+
+    .landingPage__rules--style {
+        margin: 0 20vw;
+    }
+
+    .landingPage__newGameButton--style {
+        margin-top: 5vh;
+        width: 20vw;
+    }
+}
+
+/*Desktop screens*/
+@media only screen and (min-width: 1025px) {
+    .landingPage__container--layout {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .landingPage__imageContainer--layout, .landingPage__contentContainer--stye {
+        flex: 1;
+    }
+
+    .landingPage__rules--style {
+        margin: 0 10vw;
+    }
+
+    .landingPage__newGameButton--style {
+        width: 10vw;
+    }
+  
+}
+
+/*Desktop screens*/
+@media only screen and (min-width: 1800px) {
+
+}
