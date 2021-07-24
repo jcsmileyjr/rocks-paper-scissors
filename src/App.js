@@ -4,12 +4,18 @@ import Title from '../src/components/title/Title';
 import Score from './components/score/Score';
 import GameArea from './components/gameArea/GameArea';
 import GameSummary from './components/gameSummary/GameSummary';
+import LandingPage from './components/landingPage/LandingPage';
 
 function App() {
   const [playerChoice, setPlayerChoice] = useState("");
   const [showGameSummery, setGameSummery] = useState(false);
   const [gameResults, setGameResults] = useState("");
   const [score, setScore] = useState(0);
+  const [showRules, setShowRules] = useState(false);
+
+  const playGame = () => {
+    setShowRules(true);
+  }
 
   const getPlayerchoice = (choice) => {
     setPlayerChoice(choice);
@@ -70,15 +76,22 @@ function App() {
   return (
     <div className="App">
       <Title />
-      <main>
-        <Score score={score} />
-        {!showGameSummery  &&
-          <GameArea getPlayerchoice={getPlayerchoice} play={determineWinner} />
-        }
-        {showGameSummery &&
-          <GameSummary results={gameResults} newGame={newGame} startOver={startOver} />
-        }
-      </main>
+      { !showRules &&     
+        <aside>
+          <LandingPage newGame={playGame} />
+        </aside>
+      }
+      { showRules &&       
+        <main>
+          <Score score={score} />
+          {!showGameSummery  &&
+            <GameArea getPlayerchoice={getPlayerchoice} play={determineWinner} />
+          }
+          {showGameSummery &&
+            <GameSummary results={gameResults} newGame={newGame} startOver={startOver} />
+          }
+        </main>
+      }
     </div>
   );
 }

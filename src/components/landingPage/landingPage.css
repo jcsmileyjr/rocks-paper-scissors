@@ -1,0 +1,130 @@
+
+.landingPage__container--layout {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px;
+}
+
+.landingPage__imageContainer--layout {
+    display: flex;
+    margin-top: 3px;
+    transform: scale(1);
+    animation: pulse-black 3s infinite;
+}
+
+.landingPage__image--style {
+    margin: auto;
+    width: 50%;
+}
+
+.landingPage__newGameButton--style {
+    margin-top: h;
+    width: 30vw;
+    padding: 8px 0;
+    font-weight: bolder;
+    background-color: #9E2A2B;
+    color: white;
+    border: none;
+}
+
+.landingPage--centering {
+    text-align: center;
+}
+
+.landingPage__header--style {
+    text-decoration: underline;
+    color: #9E2A2B;
+    margin-bottom: 0;
+}
+
+.landingPage__contentContainer--stye > p {
+    color: #335C67;
+}
+
+/*Tablet screens*/
+@media only screen and (min-width: 600px) {
+    .landingPage__container--layout {
+        margin-top: 5px;
+    }
+
+    .landingPage__imageContainer--layout {
+        max-height: 50vh;
+    }
+    .landingPage__image--style {
+        object-fit: contain;
+    }
+
+    .landingPage__rules--style {
+        margin: 0 20vw;
+    }
+
+    .landingPage__newGameButton--style {
+        margin-top: 5vh;
+        width: 20vw;
+    }
+}
+
+/*Desktop screens*/
+@media only screen and (min-width: 1025px) {
+    .landingPage__container--layout {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .landingPage__imageContainer--layout, .landingPage__contentContainer--stye {
+        flex: 1;
+    }
+
+    .landingPage__rules--style {
+        margin: 0 10vw;
+    }
+
+    .landingPage__newGameButton--style {
+        width: 10vw;
+    }
+  
+}
+
+/*Desktop screens*/
+@media only screen and (min-width: 1800px) {
+    .landingPage__rules--style {
+        margin: 0 12vw;
+    }
+
+    .landingPage__newGameButton--style {
+        width: 7vw;
+    }
+}
+
+/*Resource: https://alligator.io/css/css-spinning-loader-animation/*/
+.spinning-gloves {  
+    animation-name: rotate-image;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    position: relative;
+}
+
+@keyframes rotate-image {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+/*Resource: https://www.florin-pop.com/blog/2019/03/css-pulse-effect/*/
+@keyframes pulse-black {
+    0% {
+      transform: scale(0.75);
+    }
+    
+    70% {
+      transform: scale(1);
+    }
+    
+    100% {
+      transform: scale(.75);
+    }
+  }
