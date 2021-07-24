@@ -12,6 +12,7 @@ function App() {
   const [gameResults, setGameResults] = useState("");
   const [score, setScore] = useState(0);
   const [showRules, setShowRules] = useState(false);
+  const [playerLives, setPlayerLives] = useState(3);
 
   const playGame = () => {
     setShowRules(true);
@@ -56,6 +57,9 @@ function App() {
     }else{
       results.playerSummary = "Lose";
       results.computerSummary = "Win";
+      let currentNumberOfLives = playerLives - 1;
+console.log(currentNumberOfLives)
+      setPlayerLives(currentNumberOfLives);
     }
  
     setGameResults(results);
@@ -83,7 +87,7 @@ function App() {
       }
       { showRules &&       
         <main>
-          <Score score={score} />
+          <Score score={score} lives={playerLives} />
           {!showGameSummery  &&
             <GameArea getPlayerchoice={getPlayerchoice} play={determineWinner} />
           }
