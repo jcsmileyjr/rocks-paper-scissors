@@ -8,6 +8,8 @@
 .landingPage__imageContainer--layout {
     display: flex;
     margin-top: 3px;
+    transform: scale(1);
+    animation: pulse-black 3s infinite;
 }
 
 .landingPage__image--style {
@@ -94,6 +96,7 @@
     }
 }
 
+/*Resource: https://alligator.io/css/css-spinning-loader-animation/*/
 .spinning-gloves {  
     animation-name: rotate-image;
     animation-iteration-count: infinite;
@@ -108,5 +111,20 @@
     }
     to {
       transform: rotate(360deg);
+    }
+}
+
+/*Resource: https://www.florin-pop.com/blog/2019/03/css-pulse-effect/*/
+@keyframes pulse-black {
+    0% {
+      transform: scale(0.75);
+    }
+    
+    70% {
+      transform: scale(1);
+    }
+    
+    100% {
+      transform: scale(.75);
     }
   }
