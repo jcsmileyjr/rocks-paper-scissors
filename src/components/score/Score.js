@@ -1,11 +1,11 @@
 import './score.css';
 
-const Score = ({score, lives, wins}) => {
+const Score = ({score, lives, wins, timer}) => {
     return(
         <section className="score__container--layout">
             <div className="score__containter--style">
                 <h2>Timer</h2>
-                <p>{score}</p>
+                <p>{timer}</p>
             </div>
             <div className="score__containter--style">
                 <h2>Score</h2>

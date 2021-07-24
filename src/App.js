@@ -1,5 +1,5 @@
 import './App.css';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import Title from '../src/components/title/Title';
 import Score from './components/score/Score';
 import GameArea from './components/gameArea/GameArea';
@@ -14,10 +14,27 @@ function App() {
   const [showRules, setShowRules] = useState(false);
   const [playerLives, setPlayerLives] = useState(3);
   const [playerWins, setPlayerWins] = useState(0);
+  const [counter, setCounter] = useState("");
 
+  useEffect(() => {
+    const timer =
+      counter > 0 && setInterval(() => setCounter(counter - 1), 1000);
+      return () => clearInterval(timer);
+    }, [counter]);
+
+  useEffect(() => {      
+    endGame();
+  })
+
+  const endGame = () => {
+    if(counter <= 0 && counter !== ""){
+      setPlayerLives(0)
+    }
+  }
 
   const playGame = () => {
     setShowRules(true);
+    setCounter(100);
   }
 
   const getPlayerchoice = (choice) => {
@@ -91,7 +108,7 @@ function App() {
       }
       { showRules &&       
         <main>
-          <Score score={score} lives={playerLives} wins={playerWins} />
+          <Score score={score} lives={playerLives} wins={playerWins} timer={counter} />
           {!showGameSummery  &&
             <GameArea getPlayerchoice={getPlayerchoice} play={determineWinner} />
           }
