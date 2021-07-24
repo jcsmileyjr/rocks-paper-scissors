@@ -58,7 +58,6 @@ function App() {
       results.playerSummary = "Lose";
       results.computerSummary = "Win";
       let currentNumberOfLives = playerLives - 1;
-console.log(currentNumberOfLives)
       setPlayerLives(currentNumberOfLives);
     }
  
@@ -92,7 +91,7 @@ console.log(currentNumberOfLives)
             <GameArea getPlayerchoice={getPlayerchoice} play={determineWinner} />
           }
           {showGameSummery &&
-            <GameSummary results={gameResults} newGame={newGame} startOver={startOver} />
+            <GameSummary results={gameResults} newGame={newGame} startOver={startOver} lives={playerLives} />
           }
         </main>
       }

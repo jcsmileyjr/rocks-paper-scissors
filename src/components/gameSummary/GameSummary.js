@@ -6,7 +6,7 @@ import Happy from '../../assets/Win.png';
 import Mad from '../../assets/Lose.png';
 import Neutral from '../../assets/Tie.png'
 
-const GameSummary = ({results, newGame, startOver}) => {
+const GameSummary = ({results, newGame, startOver, lives}) => {
     // Old code
     // const getComputerImage = (summary) => {
     //     if(summary.computer === "Rock"){
@@ -55,7 +55,9 @@ const GameSummary = ({results, newGame, startOver}) => {
                 </section>
             </div>
             <section className="gameSummary__buttonContainer--layout">
-                <button onClick={() => newGame()} className="gameSummary__newGameButton--style"> New Game</button>
+                <div className={`${lives <= 0 ? 'disableButton':'' }`}>
+                    <button onClick={() => newGame()} className="gameSummary__newGameButton--style"> New Game</button>
+                </div>
                 <button onClick={() => startOver()} className="gameSummary__startOverButton--style"> Start Over </button>
             </section>
         </article>
