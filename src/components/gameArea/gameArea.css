@@ -101,6 +101,10 @@ button:hover {
         font-size:xx-large;
         margin-top: 20px;
     }  
+
+    .gameArea__image-style {
+        max-width: 50%;
+    }
 }
 
 /*Desktop screens*/

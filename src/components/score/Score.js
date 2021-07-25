@@ -34,15 +34,15 @@ const Score = ({score, lives, wins, timer}) => {
     return(
         <section className="score__container--layout">
             <div className="score__containter--style">
-                <h2>Timer</h2>
+                <h3>Timer</h3>
                 <p>{timer}</p>
             </div>
             <div className="score__containter--style">
-                <h2>Score</h2>
+                <h3>Score</h3>
                 <p className={`${scoreAnimation ? 'text-pop-up-top':''}`}>{score}</p>
             </div>
             <div className="score__containter--style">
-                <h2>Wins</h2>
+                <h3>Wins</h3>
                 {winsAnimation &&
                     <p className={`${winsAnimation ? 'text-pop-up-top':''}`}>🎈</p>
                 }
@@ -51,7 +51,7 @@ const Score = ({score, lives, wins, timer}) => {
                 }
             </div>
             <div className="score__containter--style">
-                <h2>Lives</h2>
+                <h3>Lives</h3>
                 {livesAnimation &&
                     <p className={`${livesAnimation ? 'text-pop-up-top':''}`}>🤬</p>
                 }

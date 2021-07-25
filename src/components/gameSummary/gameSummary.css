@@ -82,6 +82,7 @@
     .gameSummary__newGameButton--style, .gameSummary__startOverButton--style{
         font-size: xx-large;
         width: 20vw;
+        margin-top: 5vh;
     }    
 }
 
