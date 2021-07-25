@@ -95,6 +95,9 @@ function App() {
 
   const startOver = () => {
     setScore(0);
+    setCounter(100);
+    setPlayerLives(3);
+    setPlayerWins(0);
     newGame();
   }
 
